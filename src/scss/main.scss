@@ -1,3 +1,121 @@
-// imports
-@use "./components/components";
-@use "./layout/layout";
+@use "./abstracts/_abstracts.scss" as *;
+
+// ===== LOGO =====
+.logo {
+  width: 10rem;
+  margin: 5rem auto;
+}
+
+// ===== CALCULATOR =====
+.calculator {
+  margin: 0 2rem;
+  background-color: color(white);
+  padding: 2rem;
+  max-width: 900px;
+  border-radius: $mainRadius;
+  box-shadow: $mainShadow;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  .form-control {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+      @include headingStyles;
+      font-size: size(xs);
+      margin-bottom: 1rem;
+      color: color(veryDarkCyan);
+    }
+
+    &__input {
+      @include textStyles;
+      outline: 0;
+      border: 0;
+      padding: 0.5rem;
+      font-size: size(xs);
+      background-color: color(lightGrayishCyan-200);
+      color: color(veryDarkCyan);
+      border-radius: $secondaryRadius;
+    }
+
+    &--right {
+      flex-direction: row;
+      justify-content: space-between;
+
+      &:nth-child(2) {
+        margin-bottom: 12rem;
+      }
+    }
+  }
+
+  .options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .option {
+      @include headingStyles;
+      outline: 0;
+      border: 0;
+      width: 12rem;
+      padding: 0.9rem;
+      color: color(white);
+      font-size: size(xs);
+      border-radius: $secondaryRadius;
+
+      &--btn {
+        background-color: color(veryDarkCyan);
+      }
+
+      &--custom {
+        background-color: color(lightGrayishCyan-200);
+        color: color(veryDarkCyan);
+      }
+    }
+  }
+
+  &__right {
+    background-color: color(veryDarkCyan);
+    padding: 2rem;
+    border-radius: $mainRadius;
+  }
+
+  .amount-title {
+    @include headingStyles;
+    color: color(white);
+    font-size: size(xs);
+  }
+
+  .amount-persons {
+    @include textStyles;
+    color: color(lightGrayishCyan-100);
+    font-size: size(xs) - 0.2rem;
+  }
+
+  .amount {
+    @include headingStyles;
+    font-size: size(lg);
+    color: color(strongCyan);
+  }
+}
+
+// ===== BUTTON =====
+.btn {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: size(xs);
+  padding: 1rem;
+  border-radius: $secondaryRadius;
+
+  &--reset {
+    background-color: color(strongCyan);
+    color: color(veryDarkCyan);
+  }
+}
