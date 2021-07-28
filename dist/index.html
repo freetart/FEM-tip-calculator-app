@@ -9,6 +9,57 @@
     <title>Frontend Mentor | Tip Calculator App</title>
   </head>
   <body>
+    <!-- logo -->
+    <img src="/logo.a8677016.svg" alt="logo" class="logo">
+
+    <!-- calculator -->
+    <article class="calculator">
+      <div class="calculator__content">
+        <div class="calculator__left">
+          <!-- form control -->
+          <div class="form-control">
+            <label class="form-control__label">Bill</label>
+            <input class="form-control__input" type="number" placeholder="0">
+          </div>
+          <!-- form control -->
+          <div class="form-control">
+            <h4 class="options__label">Select Tip %</h4>
+            <div class="options">
+              <button class="option option--btn">5%</button>
+              <button class="option option--btn">10%</button>
+              <button class="option option--btn">15%</button>
+              <button class="option option--btn">25%</button>
+              <button class="option option--btn">50%</button>
+              <input type="number" placeholder="Custom" class="option option--custom">
+            </div>
+          </div>
+          <!-- form control -->
+          <div class="form-control">
+            <label class="form-control__label">Number of People</label>
+            <input class="form-control__input" type="number" placeholder="0">
+          </div>
+        </div>
+        <div class="calculator__right">
+          <!-- form control -->
+          <div class="form-control">
+            <div class="amount-labels">
+              <h4 class="amount-title">Tip Amount</h4>
+              <p class="amount-persons">/ persons</p>
+            </div>
+            <h2 class="amount">$0.00</h2>
+          </div>
+          <!-- form control -->
+          <div class="form-control">
+            <div class="amount-labels">
+              <h4 class="amount-title">Total</h4>
+              <p class="amount-persons">/ persons</p>
+            </div>
+            <h2 class="amount">$0.00</h2>
+          </div>
+          <button class="btn btn--reset">reset</button>
+        </div>
+      </div>
+    </article>
     <script src="/index.4ee429df.js"></script>
   </body>
 </html>

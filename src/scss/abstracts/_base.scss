@@ -21,6 +21,11 @@ html {
 
 body {
   font-family: "Space Mono", sans-serif;
+  background-color: color(lightGrayishCyan-100);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 a {
