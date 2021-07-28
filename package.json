@@ -1,0 +1,17 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "sass boilerplate (parcel)",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "parcel": "^2.0.0-beta.3.1"
+  }
+}
