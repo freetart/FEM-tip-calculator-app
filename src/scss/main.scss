@@ -142,7 +142,12 @@
   border-radius: $secondaryRadius;
   transition: $mainTransition;
 
-  &--reset {
+  &--calculate {
+    margin-bottom: 1.5rem;
+  }
+
+  &--reset,
+  &--calculate {
     background-color: color(strongCyan);
     color: color(veryDarkCyan);
 

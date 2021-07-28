@@ -19,25 +19,35 @@
           <!-- form control -->
           <div class="form-control">
             <label class="form-control__label">Bill</label>
-            <input class="form-control__input" type="number" placeholder="0">
+            <input class="form-control__input" type="number" placeholder="0" id="bill">
             <img class="form-control__icon" src="/icon-dollar.e6e6a224.svg" alt="dollar icon">
           </div>
           <!-- form control -->
           <div class="form-control">
             <h4 class="form-control__label">Select Tip %</h4>
             <div class="options">
-              <button class="option option--btn">5%</button>
-              <button class="option option--btn">10%</button>
-              <button class="option option--btn">15%</button>
-              <button class="option option--btn">25%</button>
-              <button class="option option--btn">50%</button>
-              <input type="number" placeholder="Custom" class="option option--custom">
+              <button class="option option--btn" type="button" value="5">
+                5%
+              </button>
+              <button class="option option--btn" type="button" value="10">
+                10%
+              </button>
+              <button class="option option--btn" type="button" value="15">
+                15%
+              </button>
+              <button class="option option--btn" type="button" value="25">
+                25%
+              </button>
+              <button class="option option--btn" type="button" value="50">
+                50%
+              </button>
+              <input type="number" placeholder="Custom" class="option option--custom" id="custom">
             </div>
           </div>
           <!-- form control -->
           <div class="form-control">
             <label class="form-control__label">Number of People</label>
-            <input class="form-control__input" type="number" placeholder="0">
+            <input class="form-control__input" type="number" placeholder="0" id="people">
             <img class="form-control__icon" src="/icon-person.78f8b717.svg" alt="person icon">
           </div>
         </div>
@@ -47,20 +57,23 @@
             <div class="form-control form-control--right">
               <div class="amount-labels">
                 <h4 class="amount-title">Tip Amount</h4>
-                <p class="amount-persons">/ persons</p>
+                <p class="amount-persons">/ person</p>
               </div>
-              <h2 class="amount">$0.00</h2>
+              <h2 class="amount" id="amount-tip">$0.00</h2>
             </div>
             <!-- form control -->
             <div class="form-control form-control--right">
               <div class="amount-labels">
                 <h4 class="amount-title">Total</h4>
-                <p class="amount-persons">/ persons</p>
+                <p class="amount-persons">/ person</p>
               </div>
-              <h2 class="amount">$0.00</h2>
+              <h2 class="amount" id="amount-person">$0.00</h2>
             </div>
           </div>
-          <button class="btn btn--reset">Reset</button>
+          <div>
+            <button class="btn btn--calculate" id="calculate">Calculate</button>
+            <button class="btn btn--reset" id="reset">Reset</button>
+          </div>
         </div>
       </div>
     </article>

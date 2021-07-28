@@ -186,11 +186,14 @@ input[type=number] {
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
 }
-.btn--reset {
+.btn--calculate {
+  margin-bottom: 1.5rem;
+}
+.btn--reset, .btn--calculate {
   background-color: #26c0ab;
   color: #00494d;
 }
-.btn--reset:hover, .btn--reset:focus {
+.btn--reset:hover, .btn--reset:focus, .btn--calculate:hover, .btn--calculate:focus {
   background-color: #c5e4e7;
 }
 /*# sourceMappingURL=index.85dc8318.css.map */
