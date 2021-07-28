@@ -34,6 +34,15 @@ button {
 }
 input {
   font-family: inherit;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -83,19 +92,20 @@ input {
   letter-spacing: 0.1rem;
   line-height: 1.6;
   outline: 0;
-  border: 0;
   padding: 0.5rem;
   font-size: 2rem;
   background-color: #f4fafa;
   color: #00494d;
+  border: 0.2rem solid #f4fafa;
+  transition: all 0.3s ease-in-out;
   border-radius: 0.5rem;
+}
+.calculator .form-control__input:hover, .calculator .form-control__input:focus {
+  border: 0.2rem solid #c5e4e7;
 }
 .calculator .form-control--right {
   flex-direction: row;
   justify-content: space-between;
-}
-.calculator .form-control--right:nth-child(2) {
-  margin-bottom: 12rem;
 }
 .calculator .options {
   display: grid;
@@ -112,6 +122,7 @@ input {
   padding: 0.9rem;
   color: white;
   font-size: 2rem;
+  transition: all 0.3s ease-in-out;
   border-radius: 0.5rem;
 }
 .calculator .options .option--btn {
@@ -120,8 +131,15 @@ input {
 .calculator .options .option--custom {
   background-color: #f4fafa;
   color: #00494d;
+  border: 0.2rem solid #f4fafa;
+}
+.calculator .options .option--custom:hover, .calculator .options .option--custom:focus {
+  border: 0.2rem solid #c5e4e7;
 }
 .calculator__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #00494d;
   padding: 2rem;
   border-radius: 2rem;
@@ -154,9 +172,13 @@ input {
   font-size: 2rem;
   padding: 1rem;
   border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 .btn--reset {
   background-color: #26c0ab;
   color: #00494d;
+}
+.btn--reset:hover, .btn--reset:focus {
+  background-color: #c5e4e7;
 }
 /*# sourceMappingURL=index.85dc8318.css.map */

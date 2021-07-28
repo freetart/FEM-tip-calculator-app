@@ -36,21 +36,23 @@
     &__input {
       @include textStyles;
       outline: 0;
-      border: 0;
       padding: 0.5rem;
       font-size: size(xs);
       background-color: color(lightGrayishCyan-200);
       color: color(veryDarkCyan);
+      border: 0.2rem solid color(lightGrayishCyan-200);
+      transition: $mainTransition;
       border-radius: $secondaryRadius;
+
+      &:hover,
+      &:focus {
+        border: 0.2rem solid color(lightGrayishCyan-100);
+      }
     }
 
     &--right {
       flex-direction: row;
       justify-content: space-between;
-
-      &:nth-child(2) {
-        margin-bottom: 12rem;
-      }
     }
   }
 
@@ -67,6 +69,7 @@
       padding: 0.9rem;
       color: color(white);
       font-size: size(xs);
+      transition: $mainTransition;
       border-radius: $secondaryRadius;
 
       &--btn {
@@ -76,11 +79,20 @@
       &--custom {
         background-color: color(lightGrayishCyan-200);
         color: color(veryDarkCyan);
+        border: 0.2rem solid color(lightGrayishCyan-200);
+
+        &:hover,
+        &:focus {
+          border: 0.2rem solid color(lightGrayishCyan-100);
+        }
       }
     }
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: color(veryDarkCyan);
     padding: 2rem;
     border-radius: $mainRadius;
@@ -113,9 +125,15 @@
   font-size: size(xs);
   padding: 1rem;
   border-radius: $secondaryRadius;
+  transition: $mainTransition;
 
   &--reset {
     background-color: color(strongCyan);
     color: color(veryDarkCyan);
+
+    &:hover,
+    &:focus {
+      background-color: color(lightGrayishCyan-100);
+    }
   }
 }
