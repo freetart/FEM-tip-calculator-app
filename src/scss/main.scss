@@ -19,6 +19,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
+
+    @media (max-width: 830px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .form-control {
@@ -81,6 +85,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .option {
       @include headingStyles;
       outline: 0;
@@ -128,6 +136,7 @@
     @include headingStyles;
     color: color(white);
     font-size: size(xs);
+    margin-right: 2rem;
   }
 
   .amount-persons {
