@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- aos -->
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
+    <!-- favicon -->
     <link rel="icon" href="./images/favicon/koala.ico" />
+    <!-- main scss -->
     <link rel="stylesheet" href="./scss/main.scss" />
     <title>Frontend Mentor | Tip Calculator App</title>
   </head>
   <body>
     <!-- logo -->
-    <img src="./images/logo.svg" alt="logo" class="logo" />
+    <img src="./images/logo.svg" alt="logo" class="logo" data-aos="fade-up" />
 
     <!-- calculator -->
-    <article class="calculator">
+    <article class="calculator" data-aos="fade-in" data-aos-delay="200">
       <div class="calculator__content">
         <div class="calculator__left">
           <!-- form control -->
@@ -100,6 +104,9 @@
         </div>
       </div>
     </article>
+    <!-- aos -->
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <!-- main js -->
     <script src="./js/main.js"></script>
   </body>
 </html>

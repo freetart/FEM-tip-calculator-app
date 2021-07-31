@@ -1,24 +1,24 @@
 "use scrict";
 
-// aos.js
+// ===== aos.js =====
 import AOS from "aos";
 AOS.init({ offset: 100, duration: 1000, once: true });
 
-// dom elements
-const bill = document.getElementById("bill");
+// ===== dom elements =====
+const bill = document.querySelector("#bill");
 const tipBtns = document.querySelectorAll(".option--btn");
-const tipCustom = document.getElementById("custom");
-const people = document.getElementById("people");
+const tipCustom = document.querySelector("#custom");
+const people = document.querySelector("#people");
 const errorMsg = document.querySelector(".form-control__error");
 const results = document.querySelectorAll(".amount");
 const resetBtn = document.querySelector("#reset");
 
-// initial values
+// ===== initial values =====
 let billValue = 0.0;
 let tipValue = 0.15;
 let peopleValue = 1;
 
-// validation
+// ===== validation =====
 const validateFloat = (s) => {
   var rgx = /^[0-9]*\.?[0-9]*$/;
   return s.match(rgx);
@@ -29,7 +29,7 @@ const validateInt = (s) => {
   return s.match(rgx);
 };
 
-// functionality
+// ===== functionality =====
 const setBillValue = () => {
   if (bill.value.includes(",")) {
     bill.value = bill.value.replace(",", ".");
@@ -51,7 +51,7 @@ const handleClick = (event) => {
     }
   });
 
-  //clear custom tip
+  // clear custom tip
   tipCustom.value = "";
 
   calculateTip();
@@ -110,7 +110,7 @@ const reset = () => {
   setPeopleValue();
 };
 
-// event listeners
+// ===== event listeners =====
 bill.addEventListener("input", setBillValue);
 tipBtns.forEach((btn) => {
   btn.addEventListener("click", handleClick);

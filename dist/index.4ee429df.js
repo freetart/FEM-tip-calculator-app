@@ -382,7 +382,7 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 
 },{}],"SXDIM":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-// aos.js
+// ===== aos.js =====
 var _aos = require("aos");
 var _aosDefault = parcelHelpers.interopDefault(_aos);
 "use scrict";
@@ -391,19 +391,19 @@ _aosDefault.default.init({
     duration: 1000,
     once: true
 });
-// dom elements
-const bill = document.getElementById("bill");
+// ===== dom elements =====
+const bill = document.querySelector("#bill");
 const tipBtns = document.querySelectorAll(".option--btn");
-const tipCustom = document.getElementById("custom");
-const people = document.getElementById("people");
+const tipCustom = document.querySelector("#custom");
+const people = document.querySelector("#people");
 const errorMsg = document.querySelector(".form-control__error");
 const results = document.querySelectorAll(".amount");
 const resetBtn = document.querySelector("#reset");
-// initial values
+// ===== initial values =====
 let billValue = 0;
 let tipValue = 0.15;
 let peopleValue = 1;
-// validation
+// ===== validation =====
 const validateFloat = (s)=>{
     var rgx = /^[0-9]*\.?[0-9]*$/;
     return s.match(rgx);
@@ -412,7 +412,7 @@ const validateInt = (s)=>{
     var rgx = /^[0-9]*$/;
     return s.match(rgx);
 };
-// functionality
+// ===== functionality =====
 const setBillValue = ()=>{
     if (bill.value.includes(",")) bill.value = bill.value.replace(",", ".");
     if (!validateFloat(bill.value)) bill.value = bill.value.substring(0, bill.value.length - 1);
@@ -423,7 +423,7 @@ const handleClick = (event)=>{
     tipBtns.forEach((btn)=>{
         if (event.target.innerHTML == btn.innerHTML) tipValue = parseFloat(btn.innerHTML) / 100;
     });
-    //clear custom tip
+    // clear custom tip
     tipCustom.value = "";
     calculateTip();
 };
@@ -462,7 +462,7 @@ const reset = ()=>{
     people.value = "1";
     setPeopleValue();
 };
-// event listeners
+// ===== event listeners =====
 bill.addEventListener("input", setBillValue);
 tipBtns.forEach((btn)=>{
     btn.addEventListener("click", handleClick);

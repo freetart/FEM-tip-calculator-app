@@ -1,12 +1,12 @@
 @use "./abstracts/_abstracts.scss" as *;
 
-// ===== LOGO =====
+// ===== logo =====
 .logo {
   width: 10rem;
   margin: 5rem auto;
 }
 
-// ===== CALCULATOR =====
+// ===== calculator =====
 .calculator {
   margin: 0 2rem;
   background-color: color(white);
@@ -152,7 +152,7 @@
   }
 }
 
-// ===== BUTTON =====
+// ===== button =====
 .btn {
   border: 0;
   outline: 0;

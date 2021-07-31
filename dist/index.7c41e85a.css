@@ -17,11 +17,7 @@ body {
   place-content: center;
   min-height: 100vh;
   min-width: 100vw;
-}
-@media (max-width: 500px) {
-  body {
-    width: 100%;
-  }
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
