@@ -214,4 +214,29 @@ input[type=number] {
 .btn--reset:hover, .btn--reset:focus, .btn--calculate:hover, .btn--calculate:focus {
   background-color: #c5e4e7;
 }
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 5;
+}
+.tag__heading {
+  font-size: 2rem;
+  color: #00494d;
+}
+.tag__link {
+  color: #26c0ab;
+  outline: 0;
+}
+.tag__link:hover, .tag__link:focus {
+  text-decoration: underline;
+}
+.tag__logo {
+  width: 5rem;
+}
 /*# sourceMappingURL=index.7c41e85a.css.map */

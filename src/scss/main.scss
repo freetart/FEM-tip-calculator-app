@@ -173,3 +173,35 @@
     }
   }
 }
+
+// ===== tag =====
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 5;
+
+  &__heading {
+    font-size: size(xs);
+    color: color(veryDarkCyan);
+  }
+
+  &__link {
+    color: color(strongCyan);
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+}
