@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/koala.e09c68a6.ico">
-    <link rel="stylesheet" href="/index.85dc8318.css">
+    <link rel="stylesheet" href="/index.7c41e85a.css">
     <title>Frontend Mentor | Tip Calculator App</title>
   </head>
   <body>
@@ -48,6 +48,7 @@
           <div class="form-control">
             <label class="form-control__label">Number of People</label>
             <input class="form-control__input" type="number" placeholder="0" id="people">
+            <small class="form-control__error">Value cannot be zero</small>
             <img class="form-control__icon" src="/icon-person.78f8b717.svg" alt="person icon">
           </div>
         </div>
@@ -59,7 +60,7 @@
                 <h4 class="amount-title">Tip Amount</h4>
                 <p class="amount-persons">/ person</p>
               </div>
-              <h2 class="amount" id="amount-tip">$0.00</h2>
+              <h2 class="amount value" id="amount-tip">$0.00</h2>
             </div>
             <!-- form control -->
             <div class="form-control form-control--right">
@@ -67,11 +68,10 @@
                 <h4 class="amount-title">Total</h4>
                 <p class="amount-persons">/ person</p>
               </div>
-              <h2 class="amount" id="amount-person">$0.00</h2>
+              <h2 class="amount value" id="amount-person">$0.00</h2>
             </div>
           </div>
           <div>
-            <button class="btn btn--calculate" id="calculate">Calculate</button>
             <button class="btn btn--reset" id="reset">Reset</button>
           </div>
         </div>

@@ -51,6 +51,17 @@
       }
     }
 
+    &__error {
+      display: none;
+      font-size: size(xxs) - 0.1rem;
+      color: red;
+      margin-top: 0.5rem;
+    }
+
+    .form-control__error.show-error-msg {
+      display: block;
+    }
+
     &__icon {
       width: 1.5rem;
       position: absolute;
@@ -141,10 +152,6 @@
   padding: 1rem;
   border-radius: $secondaryRadius;
   transition: $mainTransition;
-
-  &--calculate {
-    margin-bottom: 1.5rem;
-  }
 
   &--reset,
   &--calculate {
