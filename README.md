@@ -1,6 +1,8 @@
 # FEM-tip-calculator-app
 tip calculator app challenge for frontend mentor
 
+site: https://fem-tip-calculator-challenge.netlify.app/
+
 #### Features
 - tip calculator
 - responsive design
