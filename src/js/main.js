@@ -1,11 +1,16 @@
 "use scrict";
 
+// aos.js
+import AOS from "aos";
+AOS.init({ offset: 100, duration: 1000, once: true });
+
+// dom elements
 const bill = document.getElementById("bill");
 const tipBtns = document.querySelectorAll(".option--btn");
 const tipCustom = document.getElementById("custom");
 const people = document.getElementById("people");
 const errorMsg = document.querySelector(".form-control__error");
-const results = document.querySelectorAll(".value");
+const results = document.querySelectorAll(".amount");
 const resetBtn = document.querySelector("#reset");
 
 // initial values
@@ -24,6 +29,7 @@ const validateInt = (s) => {
   return s.match(rgx);
 };
 
+// functionality
 const setBillValue = () => {
   if (bill.value.includes(",")) {
     bill.value = bill.value.replace(",", ".");
@@ -84,8 +90,13 @@ const calculateTip = () => {
   if (peopleValue >= 1) {
     let tipAmount = (billValue * tipValue) / peopleValue;
     let total = (billValue * (tipValue + 1)) / peopleValue;
-    results[0].innerHTML = "$" + tipAmount.toFixed(2);
-    results[1].innerHTML = "$" + total.toFixed(2);
+    results[0].innerHTML = `$${tipAmount.toFixed(2)}`;
+    results[1].innerHTML = `$${total.toFixed(2)}`;
+  }
+
+  if (bill.value === "") {
+    results[0].innerHTML = `$0.00`;
+    results[1].innerHTML = `$0.00`;
   }
 };
 
