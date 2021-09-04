@@ -13,7 +13,7 @@ site: https://fem-tip-calculator-challenge.netlify.app/
 - scss
 - javascript
 
-#### Dependencies
+#### Libraries
 - parcel
 - aos.js
 
